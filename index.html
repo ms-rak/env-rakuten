@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Websites</title>
+</head>
+
+<body> 
+  <div id="productList">
+  </div>
+ 
+  <!-- HANDLEBARS TEMPLATE -->
+  <script id="productTemplate" type="text/x-handlebars-template">
+    <ul>
+      {{#products}}
+        <li class="product">
+        	<img src="{{image}}" alt="" />
+        	<p>{{name}}</p>
+        	<p>{{price}}</p>
+        </li>
+      {{/products}}
+    </ul>
+  </script>
+
+
+	<script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="render/products.js"></script>
+</body>
+
+</html>
